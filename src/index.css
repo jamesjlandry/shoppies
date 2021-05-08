@@ -24,32 +24,45 @@ code {
   min-height: 100%;
 }
 .title {
-  font-family: 'Pompiere';
-  
+  font-family: 'Monoton';
+  color: rgb(170, 153, 138)
 }
 
 .title h1{
   font-size: 62px;
-  color: rgb(207, 203, 203);
+  height: 64px;
+}
+
+.title h2{
+  margin: 0;
+  font-size: 30px;
 }
 
 .nominate_wrapper {
+  color:rgb(250, 235, 235);
   display: flex;
   flex-wrap: wrap;
   margin: 5% 10% 10% 10%;
-  padding: 1em;
+  padding: 5px;
   min-width: 80%;
-  min-height: 400px;
-  background-color: rgb(172, 145, 172);
+  min-height: 600px;
+  background-color: rgb(151, 119, 14);
+  border-radius: 5%;
 }
 
 .search {
   display: flex;
+  color:rgb(207, 203, 203);
   justify-content: center;
   width: 100%;
   height: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 6px;
+  margin-top: 30px;
 }
+
+.search input{
+  color:rgb(207, 203, 203);
+ }
 
 .search_results {
   width: 60%;
@@ -74,4 +87,17 @@ code {
 
 .nomination {
   margin-left: 25px;
+}
+
+
+.banner {
+  position: fixed;
+  top: 25%;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(184, 173, 21);
+  right: 0;
+  padding-top: 12px;
+  font-size: 22px;
+
 }

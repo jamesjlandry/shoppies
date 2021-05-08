@@ -46,7 +46,7 @@ function App() {
           <source src={hd0050} type='video/mp4' /> 
       </video>
      
-        <div className="title" ><h1 >The Shoppies</h1></div>
+        <div className="title" ><h1 >The Shoppies</h1><h2> where your voice matters.</h2><h3>nominate your 5 favorite movies.</h3></div>
         <div className="nominate_wrapper">
         <form className="search"  onSubmit={e => getMovies(e.target.value)}>
         <TextField label="Film Search" placeholder="Enter Title" onChange={e =>  getMovies(e)}>
@@ -55,8 +55,8 @@ function App() {
         {nominations.length === 5 
         ? 
         <div className="five_noms">
-          <div>
-            Congratulations, you have nominated 5 movies!
+          <div className="banner">
+            Congratulations, you've nominated 5 films! 
           </div>
         </div>
       : 
