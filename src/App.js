@@ -1,7 +1,7 @@
 
 import './App.css';
 import { useState } from "react"
-import film from './film.mp4'
+import hd0050 from './hd0050.mp4'
 import { TextField } from '@material-ui/core'
 
 
@@ -41,10 +41,10 @@ function App() {
     <div className="App">
      
        
-      <video className="film_background" autoPlay loop muted>
-          <source src={film} type='video/mp4' /> 
+    
+     <video className="film_background" autoPlay loop muted>
+          <source src={hd0050} type='video/mp4' /> 
       </video>
-   
      
         <div className="title" ><h1 >The Shoppies</h1></div>
         <div className="nominate_wrapper">
@@ -54,7 +54,7 @@ function App() {
         </form>
         {nominations.length === 5 
         ? 
-        <div>
+        <div className="five_noms">
           <div>
             Congratulations, you have nominated 5 movies!
           </div>
@@ -65,8 +65,8 @@ function App() {
           {(movies)
           ? 
           <div className="search_results">
-            {movies.map(movie => <div><div><div>{movie.Title}</div><div>{movie.Year}</div>
-          <div>{nominations.includes(movie) ? <button disabled size="small" onClick={e => addNomination(movie)}>Nominate</button> : <button size="small" onClick={e => addNomination(movie)}>Nominate</button>} </div></div></div>)}
+            {movies.map(movie => <div className="result" ><div>{movie.Title}</div><div>{movie.Year}</div>
+          <div>{nominations.includes(movie) ? <button disabled size="small" onClick={e => addNomination(movie)}>Nominate</button> : <button size="small" onClick={e => addNomination(movie)}>Nominate</button>} </div></div>)}
           </div>
         :
         null}
@@ -75,9 +75,9 @@ function App() {
           ? 
           nominations.map(nomination =>  <div className="nomination">
             <div>
-          <div className="title" color="textSecondary" gutterBottom> {nomination.Title}</div> 
+          <div  color="textSecondary" gutterBottom> {nomination.Title}</div> 
           <div variant="h5" component="h2"> {nomination.Year}</div>
-          <div color="textSecondary"> {nomination.imdbRating}</div>
+          <div color="textSecondary"> IMDB Rating: {nomination.imdbRating}</div>
           <div variant="body2" component="p">
        
           <br />
