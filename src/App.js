@@ -75,14 +75,14 @@ function App() {
           ? 
           nominations.map(nomination =>  <div className="nomination">
             <div>
-          <div  color="textSecondary" gutterBottom> {nomination.Title}</div> 
-          <div variant="h5" component="h2"> {nomination.Year}</div>
-          <div color="textSecondary"> IMDB Rating: {nomination.imdbRating}</div>
-          <div variant="body2" component="p">
+          <div  > {nomination.Title}</div> 
+          <div > {nomination.Year}</div>
+          
+          
        
           <br />
           <div><button size="small" onClick={e => removeNomination(nomination)}>Remove Nomination</button> </div>
-          </div>
+        
           </div>
          
           </div>)
